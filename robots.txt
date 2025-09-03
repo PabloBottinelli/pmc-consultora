@@ -1,0 +1,5 @@
+User-Agent: *
+
+User-Agent: Bingbot
+
+Sitemap: https://pmcconsultora.com.ar/sitemap.xml
