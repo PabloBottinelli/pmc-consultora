@@ -90,7 +90,7 @@
       transition: all 500ms ease; }
     .footer a i:hover {
       transform: scale(1.1); }
-  .footer h4 {
+  .footer .rr {
     text-align: center;
     width: 100%;
     color: white;
