@@ -10,6 +10,22 @@
 
         gtag('config', 'AW-17532171971');
     </script>
+    <!-- Event snippet for Contacto conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17532171971/OcC5CLivu5cbEMPt_qdB',
+            'event_callback': callback
+        });
+        return false;
+        }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -314,7 +330,7 @@
             <input type="email" name="mail" placeholder="Tu mail..." required>
             <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary" onclick="gtag_report_conversion()">Enviar</button>
 
             <!-- Campos ocultos -->
             <input type="hidden" name="_subject" value="Mensaje desde la web de la consultora">
@@ -323,7 +339,7 @@
         <p id="formMsg" style="display:none; color:green; margin-top:10px; text-align: center; font-size: 1.2em;"></p>
         <div class="contacto-i">
             <div>
-                <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank">(+54 11) 4073-7584</a>
+                <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" onclick="return gtag_report_conversion()">(+54 11) 4073-7584</a>
             </div>
         </div>
     </div>
@@ -331,7 +347,7 @@
     
 
     <div class="btn-whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank"><img src="media/wpp.png" alt=""></a>
+        <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" onclick="gtag_report_conversion()"><img src="media/wpp.png" alt=""></a>
     </div>
 
     <section class="donde">
@@ -343,7 +359,7 @@
         <div class="footer_content">
             <a href="https://www.instagram.com/pmcconsultora" target="_blank" class="footer__a" rel="noreferrer noopener"><i class="fa fa-instagram redes"></i></a>
             <a href="https://www.facebook.com/consultorapmc" target="_blank" class="footer__a" rel="noreferrer noopener"><i class="fa fa-facebook redes"></i></a>
-            <a href="mailto:hablapmc@hotmail.com" target="_blank" class="footer__a" rel="noreferrer noopener"><i class="far fa-envelope-open"></i></a>
+            <a href="mailto:hablapmc@hotmail.com" target="_blank" class="footer__a" rel="noreferrer noopener" onclick="gtag_report_conversion()"><i class="far fa-envelope-open"></i></a>
             <br>
             <a class="rr" href="https://www.linkedin.com/in/pablo-bottinelli">© 2025: PMC Consultora | Web By Pablo Bottinelli</a>
         </div>
