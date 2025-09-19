@@ -601,7 +601,7 @@ padding-bottom: 30px;}
     @media (max-width: 770px) {
       .contacto .contacto__form {
         width: 80%; } }
-    .contacto .contacto__form input[type="text"], .contacto .contacto__form input[type="email"], .contacto .contacto__form textarea {
+    .contacto .contacto__form input[type="text"], .contacto .contacto__form input[type="email"], .contacto .contacto__form textarea, .contacto .contacto__form input[type="tel"] {
       width: 100%;
       padding: 10px;
       border-radius: 10px;
@@ -610,7 +610,7 @@ padding-bottom: 30px;}
       resize: none; }
     .contacto .contacto__form textarea {
       height: 100px; }
-    .contacto .contacto__form input[type="text"]:focus, .contacto .contacto__form input[type="email"]:focus, .contacto .contacto__form textarea:focus {
+    .contacto .contacto__form input[type="text"]:focus, .contacto .contacto__form input[type="email"]:focus, .contacto .contacto__form textarea:focus, .contacto .contacto__form input[type="email"]:focus {
       border: 1px solid #000000;
       border-radius: 10px;
       outline: none; }

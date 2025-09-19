@@ -328,9 +328,10 @@
             <input type="text" name="nombre" placeholder="Tu nombre..." required>
             <input type="text" name="apellido" placeholder="Tu apellido...">
             <input type="email" name="mail" placeholder="Tu mail..." required>
+            <input type="tel" name="celular" placeholder="Tu celular..." required>
             <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-            <button type="submit" class="btn btn-primary" onclick="gtag_report_conversion()">Enviar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
 
             <!-- Campos ocultos -->
             <input type="hidden" name="_subject" value="Mensaje desde la web de la consultora">
@@ -381,6 +382,7 @@
                 if (response.ok) {
                     document.getElementById("formMsg").innerText = "✅ Tu mensaje fue enviado con éxito.";
                     document.getElementById("formMsg").style.display = "block";
+                    gtag_report_conversion();
                     form.reset();
                 } else {
                     document.getElementById("formMsg").innerText = "⚠️ Hubo un error al enviar el mensaje.";
