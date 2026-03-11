@@ -1,0 +1,4 @@
+- agregar scroll-margin-top: 80px; a todas las secciones del nav para que no que desfasado
+- hacer lo equivalente para el nav mb
+- agregar propuesta de valor al nav mb
+- no anda el boton de contactos de "donde"
