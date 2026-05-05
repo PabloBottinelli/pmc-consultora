@@ -10,20 +10,71 @@
 
         gtag('config', 'AW-17532171971');
     </script>
-    <!-- Event snippet for Contacto conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-        function gtag_report_conversion(url) {
-        var callback = function () {
-            if (typeof(url) != 'undefined') {
-            window.location = url;
-            }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17532171971/OcC5CLivu5cbEMPt_qdB',
-            'event_callback': callback
-        });
-        return false;
+        function gtag_report_formulario() {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17532171971/G63iCJjS1qgcEMPt_qdB'
+            });
+        }
+
+        function gtag_report_whatsapp(url) {
+            var opened = false;
+
+            var openWhatsapp = function () {
+                if (!opened && typeof(url) !== 'undefined') {
+                    opened = true;
+                    window.open(url, '_blank');
+                }
+            };
+
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17532171971/VVX8CMPbmagcEMPt_qdB',
+                'event_callback': openWhatsapp
+            });
+
+            setTimeout(openWhatsapp, 1000);
+
+            return false;
+        }
+
+        function gtag_report_mail(url) {
+            var redirected = false;
+
+            var goToMail = function () {
+                if (!redirected && typeof(url) !== 'undefined') {
+                    redirected = true;
+                    window.location = url;
+                }
+            };
+
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17532171971/nPfICPmXmqgcEMPt_qdB',
+                'event_callback': goToMail
+            });
+
+            setTimeout(goToMail, 1000);
+
+            return false;
+        }
+
+        function gtag_report_checklist(url) {
+            var redirected = false;
+
+            var goToChecklist = function () {
+                if (!redirected && typeof(url) !== 'undefined') {
+                    redirected = true;
+                    window.location = url;
+                }
+            };
+
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17532171971/Y05dCKWdmqgcEMPt_qdB',
+                'event_callback': goToChecklist
+            });
+
+            setTimeout(goToChecklist, 1000);
+
+            return false;
         }
     </script>
     <meta charset="UTF-8">
@@ -109,7 +160,7 @@
     </section>
 
     <section class="donde">
-        <p><a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" onclick="gtag_report_conversion()">Solicitá un diagnóstico de 30 minutos <strong>SIN CARGO</strong></a></p>
+        <p><a href="#contacto">Solicitá un diagnóstico de 30 minutos <strong>SIN CARGO</strong></a></p>
     </section>
     
     <section class="nosotros">
@@ -416,23 +467,23 @@
         <p id="formMsg" style="display:none; color:green; margin-top:10px; text-align: center; font-size: 1.2em;"></p>
     </div>
 
-    <a href="/media/checklist_autodiagnostico.docx" class="checklist-tab" download>
+    <a href="/media/checklist_autodiagnostico.docx" class="checklist-tab" download onclick="return gtag_report_checklist(this.href)">
         Descargá tu <strong>checklist de Autodiagnóstico</strong>
     </a>
 
     <div class="btn-whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" onclick="gtag_report_conversion()"><img src="media/wpp.png" alt=""></a>
+        <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" onclick="return gtag_report_whatsapp(this.href)"><img src="media/wpp.png" alt=""></a>
     </div>
 
     <section class="donde">
-        <p>Ofrecemos nuestros servicios en <strong>toda</strong> América Latina! <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" onclick="gtag_report_conversion()">Contactanos</a></p>
+        <p>Ofrecemos nuestros servicios en <strong>toda</strong> América Latina! <a href="#contacto">Contactanos</a></p>
     </section>
 
     <footer class="footer">
         <a href="index.html" class="logo_footer"><img src="media/logoconsultora.png" alt="Logo Consultora PMC"></a>
         <div class="footer_content">
-            <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" class="footer__a" rel="noreferrer noopener" onclick="gtag_report_conversion()"><i class="fab fa-whatsapp redes"></i></a>
-            <a href="mailto:hablapmc@hotmail.com" target="_blank" class="footer__a" rel="noreferrer noopener" onclick="gtag_report_conversion()"><i class="far fa-envelope-open"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5491140737584" target="_blank" class="footer__a" rel="noreferrer noopener" onclick="return gtag_report_whatsapp(this.href)"><i class="fab fa-whatsapp redes"></i></a>
+            <a href="mailto:hablapmc@hotmail.com" target="_blank" class="footer__a" rel="noreferrer noopener" onclick="return gtag_report_mail(this.href)"><i class="far fa-envelope-open"></i></a>
             <br>
             <a class="rr" href="https://www.linkedin.com/in/pablo-bottinelli">© 2026: PMC Consultora | Web By Pablo Bottinelli</a>
         </div>
@@ -494,8 +545,8 @@
                 form.reset();
 
                 // Conversión solo si fue OK
-                if (typeof gtag_report_conversion === "function") {
-                gtag_report_conversion();
+                if (typeof gtag_report_formulario === "function") {
+                    gtag_report_formulario();
                 }
             } else {
                 formMsg.style.display = "block";
