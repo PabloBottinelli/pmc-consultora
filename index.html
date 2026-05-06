@@ -57,22 +57,23 @@
             return false;
         }
 
-        function gtag_report_checklist(url) {
-            var redirected = false;
-
-            var goToChecklist = function () {
-                if (!redirected && typeof(url) !== 'undefined') {
-                    redirected = true;
+        function gtag_report_descarga_checklist(url) {
+            var callback = function () {
+                if (typeof(url) !== 'undefined') {
                     window.location = url;
                 }
             };
 
             gtag('event', 'conversion', {
-                'send_to': 'AW-17532171971/Y05dCKWdmqgcEMPt_qdB',
-                'event_callback': goToChecklist
+                'send_to': 'AW-17532171971/JPOvCJSCvqgcEMPt_qdB',
+                'event_callback': callback
             });
 
-            setTimeout(goToChecklist, 1000);
+            setTimeout(function () {
+                if (typeof(url) !== 'undefined') {
+                    window.location = url;
+                }
+            }, 1000);
 
             return false;
         }
@@ -467,7 +468,7 @@
         <p id="formMsg" style="display:none; color:green; margin-top:10px; text-align: center; font-size: 1.2em;"></p>
     </div>
 
-    <a href="/media/checklist_autodiagnostico.docx" class="checklist-tab" download onclick="return gtag_report_checklist(this.href)">
+    <a href="/media/checklist_autodiagnostico.docx" class="checklist-tab" download onclick="return gtag_report_descarga_checklist(this.href)">
         Descargá tu <strong>checklist de Autodiagnóstico</strong>
     </a>
 
