@@ -13,7 +13,7 @@
     <script>
         function gtag_report_formulario() {
             gtag('event', 'conversion', {
-                'send_to': 'AW-17532171971/G63iCJjS1qgcEMPt_qdB'
+                'send_to': 'AW-17532171971/G63iCJjSlqgcEMPt_qdB'
             });
         }
 
@@ -451,7 +451,7 @@
     <div class="contacto" id="contacto">
         <h1 class="contacto__h1">Contactanos</h1>
         <h2>Dejanos tu consulta y te responderemos a la brevedad</h2>
-        <form id="contactForm" action="https://formsubmit.co/hablapmc@hotmail.com" method="POST" class="contacto__form">
+        <form id="contactForm" action="enviar-formulario.php" method="POST" class="contacto__form">
             <input type="text" name="nombre" placeholder="Tu nombre..." required>
             <input type="text" name="apellido" placeholder="Tu apellido...">
             <input type="email" name="mail" placeholder="Tu mail..." required>
@@ -460,10 +460,6 @@
             <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
             <button type="submit" class="btn btn-primary">Enviar</button>
-
-            <!-- Campos ocultos -->
-            <input type="hidden" name="_subject" value="Mensaje desde la web de la consultora">
-            <input type="hidden" name="_captcha" value="false">
         </form>
         <p id="formMsg" style="display:none; color:green; margin-top:10px; text-align: center; font-size: 1.2em;"></p>
     </div>
@@ -492,81 +488,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script>
-        const form = document.getElementById("contactForm");
+        const params = new URLSearchParams(window.location.search);
+        const formStatus = params.get("form");
         const formMsg = document.getElementById("formMsg");
-        const btn = form.querySelector('button[type="submit"]');
-        const originalBtnHtml = btn.innerHTML;
-        let isSubmitting = false;
 
-        form.addEventListener("submit", async (e) => {
-            // 1) Validación nativa
-            if (!form.checkValidity()) {
-            e.preventDefault();
-            form.reportValidity();
-            return;
-            }
-
-            // Evita doble envío
-            if (isSubmitting) {
-            e.preventDefault();
-            return;
-            }
-            isSubmitting = true;
-            e.preventDefault();
-
-            // 2) Estado "enviando..."
-            btn.disabled = true;
-            btn.setAttribute("aria-busy", "true");
-            btn.innerHTML = `
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            &nbsp;Enviando...
-            `;
-
-            // Mensaje “tardando” si la red está lenta
-            let slowTimer = setTimeout(() => {
+        if (formMsg && formStatus === "ok") {
             formMsg.style.display = "block";
-            formMsg.style.color = "#6c757d";
-            formMsg.innerText = "⌛ Enviando… puede tardar unos segundos.";
-            }, 3000);
-
-            try {
-            const data = new FormData(form);
-            const res = await fetch(form.action, {
-                method: form.method,
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-
-            clearTimeout(slowTimer);
-
-            if (res.ok) {
-                formMsg.style.display = "block";
-                formMsg.style.color = "green";
-                formMsg.innerText = "✅ Tu mensaje fue enviado con éxito.";
-                form.reset();
-
-                // Conversión solo si fue OK
-                if (typeof gtag_report_formulario === "function") {
-                    gtag_report_formulario();
-                }
-            } else {
-                formMsg.style.display = "block";
-                formMsg.style.color = "red";
-                formMsg.innerText = "⚠️ Hubo un error al enviar el mensaje. Probá de nuevo.";
+            formMsg.style.color = "green";
+            formMsg.innerText = "✅ Tu mensaje fue enviado con éxito.";
+            if (typeof gtag_report_formulario === "function") {
+                gtag_report_formulario();
             }
-            } catch (err) {
-            clearTimeout(slowTimer);
+        }
+
+        if (formMsg && formStatus === "error") {
             formMsg.style.display = "block";
             formMsg.style.color = "red";
-            formMsg.innerText = "⚠️ Error de conexión. Intenta de nuevo.";
-            } finally {
-            // 3) Restaurar botón
-            btn.disabled = false;
-            btn.removeAttribute("aria-busy");
-            btn.innerHTML = originalBtnHtml;
-            isSubmitting = false;
-            }
-        });
+            formMsg.innerText = "⚠️ Hubo un error al enviar el mensaje. Probá de nuevo.";
+        }
+
+        if (formMsg && formStatus === "mail-invalido") {
+            formMsg.style.display = "block";
+            formMsg.style.color = "red";
+            formMsg.innerText = "⚠️ Ingresá un email válido.";
+        }
     </script>
     <script>
         const links = document.querySelectorAll(".nav-link");
