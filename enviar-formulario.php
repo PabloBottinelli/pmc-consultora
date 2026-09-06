@@ -1,48 +1,76 @@
 <?php
-    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-        header("Location: index.html");
-        exit;
-    }
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: /");
+    exit;
+}
 
-    $nombre = trim($_POST["nombre"] ?? "");
-    $apellido = trim($_POST["apellido"] ?? "");
-    $mail = trim($_POST["mail"] ?? "");
-    $celular = trim($_POST["celular"] ?? "");
-    $nombreEmpresa = trim($_POST["nombreEmpresa"] ?? "");
-    $mensaje = trim($_POST["mensaje"] ?? "");
+// Anti bot
+if (!empty($_POST["website"] ?? "")) {
+    header("Location: /#contacto");
+    exit;
+}
 
-    if ($nombre === "" || $mail === "" || $celular === "" || $nombreEmpresa === "" || $mensaje === "") {
-        header("Location: index.html?form=error#contacto");
-        exit;
-    }
+function limpiar($valor) {
+    return trim(strip_tags((string)$valor));
+}
 
-    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-        header("Location: index.html?form=mail-invalido#contacto");
-        exit;
-    }
+$nombre = limpiar($_POST["nombre"] ?? "");
+$empresa = limpiar($_POST["nombreEmpresa"] ?? "");
+$mail = limpiar($_POST["mail"] ?? "");
+$celular = limpiar($_POST["celular"] ?? "");
+$servicio = limpiar($_POST["servicio"] ?? "");
+$mensaje = limpiar($_POST["mensaje"] ?? "");
 
-    $destinatario = "hablapmc@hotmail.com";
-    $asunto = "Mensaje desde la web de la consultora";
+if ($nombre === "" || $servicio === "" || $mensaje === "") {
+    header("Location: /?form=error#contacto");
+    exit;
+}
 
-    $contenido = "Nuevo mensaje desde la web de PMC Consultora\n\n";
-    $contenido .= "Nombre: " . $nombre . "\n";
-    $contenido .= "Apellido: " . $apellido . "\n";
-    $contenido .= "Email: " . $mail . "\n";
-    $contenido .= "Celular: " . $celular . "\n";
-    $contenido .= "Empresa: " . $nombreEmpresa . "\n\n";
-    $contenido .= "Mensaje:\n" . $mensaje . "\n";
+$mailValido = ($mail !== "" && filter_var($mail, FILTER_VALIDATE_EMAIL));
+$telefonoValido = (
+    $celular !== "" &&
+    preg_match('/^[0-9+\s()\-]{8,25}$/', $celular)
+);
 
-    $headers = "From: PMC Consultora <no-reply@pmcconsultora.com.ar>\r\n";
-    $headers .= "Reply-To: " . $mail . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+if ($mail !== "" && !$mailValido) {
+    header("Location: /?form=mail-invalido#contacto");
+    exit;
+}
 
-    $enviado = mail($destinatario, $asunto, $contenido, $headers);
+if (!$mailValido && !$telefonoValido) {
+    header("Location: /?form=contacto#contacto");
+    exit;
+}
 
-    if ($enviado) {
-        header("Location: index.html?form=ok#contacto");
-        exit;
-    } else {
-        header("Location: index.html?form=error#contacto");
-        exit;
-    }
+$destinatario = "hablapmc@hotmail.com";
+
+$servicioSeguro = str_replace(["\r", "\n"], "", $servicio);
+$asunto = "Nueva consulta web - " . $servicioSeguro;
+
+$contenido = "Nueva consulta desde pmcconsultora.com.ar\n\n";
+$contenido .= "Nombre: " . $nombre . "\n";
+$contenido .= "Empresa / local: " . ($empresa !== "" ? $empresa : "No informado") . "\n";
+$contenido .= "Email: " . ($mail !== "" ? $mail : "No informado") . "\n";
+$contenido .= "Celular / WhatsApp: " . ($celular !== "" ? $celular : "No informado") . "\n";
+$contenido .= "Servicio: " . $servicio . "\n\n";
+$contenido .= "Mensaje:\n" . $mensaje . "\n";
+
+$headers = "From: PMC Consultora <no-reply@pmcconsultora.com.ar>\r\n";
+
+if ($mailValido) {
+    $replyTo = str_replace(["\r", "\n"], "", $mail);
+    $headers .= "Reply-To: " . $replyTo . "\r\n";
+}
+
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+$enviado = mail($destinatario, $asunto, $contenido, $headers);
+
+if ($enviado) {
+    header("Location: /?form=ok#contacto");
+} else {
+    header("Location: /?form=error#contacto");
+}
+
+exit;
 ?>

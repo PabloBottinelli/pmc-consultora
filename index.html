@@ -2,574 +2,610 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="PMC Consultora de alimentos y bebidas. Ahorre dinero y optimice su empresa. Proveemos un servicio integral a partir de una exacta determinación de las causas para brindar soluciones sustentables.
-    BMP, 5S, POES, ISO, Auditorías de calidad, Coaching, Capacitaciones, Coaching estrategico, Optimizacion de procesos, Mystery Shopper.
-    Brindamos soluciones concretas.">
+    <meta name="description"
+        content="Consultoría para empresas de alimentos y gastronomía. Auditorías, sistemas de calidad, desarrollo de productos, optimización de procesos, capacitación y mejora operativa.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a146e">
     <link rel="canonical" href="https://www.pmcconsultora.com.ar/">
 
-    <title>Consultora PMC</title>
+    <!-- Vista previa al compartir el link -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Consultora de Alimentos y Gastronomía | PMC">
+    <meta property="og:description"
+        content="Más de 35 años ayudando a empresas de alimentos y gastronomía a mejorar calidad, procesos, productividad y resultados.">
+    <meta property="og:url" content="https://www.pmcconsultora.com.ar/">
+    <meta property="og:image" content="https://www.pmcconsultora.com.ar/media/banner.jpg">
 
-    <!-- Google tag (gtag.js) -->
+    <title>Consultora de Alimentos y Gastronomía | PMC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <meta name="google-site-verification" content="wND1h62tgjyB4vDvthnX2tl6ACkHHSIeaS_BA5F-lh4">
+
+    <!-- Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17532171971"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'AW-17532171971');
-    </script>
-    <script>
+
         function gtag_report_formulario() {
             gtag('event', 'conversion', {
                 'send_to': 'AW-17532171971/G63iCJjSlqgcEMPt_qdB'
             });
         }
 
-        function gtag_report_whatsapp(url) {
-            var opened = false;
-
-            var openWhatsapp = function () {
-                if (!opened && typeof (url) !== 'undefined') {
-                    opened = true;
-                    window.open(url, '_blank');
-                }
-            };
-
+        function gtag_report_whatsapp() {
             gtag('event', 'conversion', {
-                'send_to': 'AW-17532171971/VVX8CMPbmagcEMPt_qdB',
-                'event_callback': openWhatsapp
+                'send_to': 'AW-17532171971/VVX8CMPbmagcEMPt_qdB'
             });
-
-            setTimeout(openWhatsapp, 1000);
-
-            return false;
+            return true;
         }
 
-        function gtag_report_mail(url) {
-            var redirected = false;
-
-            var goToMail = function () {
-                if (!redirected && typeof (url) !== 'undefined') {
-                    redirected = true;
-                    window.location = url;
-                }
-            };
-
+        function gtag_report_mail() {
             gtag('event', 'conversion', {
-                'send_to': 'AW-17532171971/nPfICPmXmqgcEMPt_qdB',
-                'event_callback': goToMail
+                'send_to': 'AW-17532171971/nPfICPmXmqgcEMPt_qdB'
             });
-
-            setTimeout(goToMail, 1000);
-
-            return false;
+            return true;
         }
 
-        function gtag_report_descarga_checklist(url) {
-            var callback = function () {
-                if (typeof (url) !== 'undefined') {
-                    window.location = url;
-                }
-            };
-
+        function gtag_report_descarga_checklist() {
             gtag('event', 'conversion', {
-                'send_to': 'AW-17532171971/JPOvCJSCvqgcEMPt_qdB',
-                'event_callback': callback
+                'send_to': 'AW-17532171971/JPOvCJSCvqgcEMPt_qdB'
             });
-
-            setTimeout(function () {
-                if (typeof (url) !== 'undefined') {
-                    window.location = url;
-                }
-            }, 1000);
-
-            return false;
+            return true;
         }
     </script>
-    <meta charset="UTF-8">
 
-
-    <script src="https://kit.fontawesome.com/dc19d10b3a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap"
-        rel="stylesheet">
-    <meta name="google-site-verification" content="wND1h62tgjyB4vDvthnX2tl6ACkHHSIeaS_BA5F-lh4" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "PMC Consultora",
+      "url": "https://www.pmcconsultora.com.ar/",
+      "telephone": "+54 9 11 4073-7584",
+      "email": "hablapmc@hotmail.com",
+      "description": "Consultoría para empresas de alimentos y gastronomía especializada en calidad, auditorías, desarrollo de productos, capacitación y optimización de procesos.",
+      "areaServed": "Latin America"
+    }
+    </script>
 </head>
 
-<body>
-    <header class="header">
-        <div class="header_pc">
-            <a href="index.html"><img src="media/logoconsultora.png" alt="Logo Consultora PMC"></a>
-            <a href="index.html">Inicio</a>
-            <a href="#quienessomos">Quiénes somos</a>
-            <a href="#propuesta_de_valor">Propuesta de valor</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#clientes">Clientes</a>
-            <a href="#contacto">Contacto</a>
-        </div>
+<body id="inicio">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-        <nav class="navbar navbar-expand-lg headerBoots">
-            <a class="navbar-brand" href="index.html"><img src="media/logoconsultora.png" alt="Logo Consultora PMC"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="#inicio" aria-label="PMC Consultora - Inicio">
+                <img src="media/logoconsultora.png" alt="PMC Consultora" width="291" height="129">
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"
+                aria-label="Abrir menú">
+                <span></span><span></span><span></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#quienessomos">Quiénes somos</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#propuesta_de_valor">Propuesta de valor</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#servicios-mb">Servicios</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#clientes">Clientes</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+                <a href="#servicios">Servicios</a>
+                <a href="#gastronomia">Gastronomía</a>
+                <a href="#propuesta_de_valor">Cómo trabajamos</a>
+                <a href="#nosotros">Quiénes somos</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#contacto" class="nav-cta">Contactar</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="placeholder"></div>
+    <div class="menu-backdrop" aria-hidden="true"></div>
 
-    <section class="banner">
-        <img class="pc" src="media/banner.jpg" alt="Banner Consultora" style="width: 100%;">
-        <img class="mob" src="media/banner-mb.jpg" alt="Banner Consultora" style="width: 100%;">
-        <div>
-            <h1>Consultora de Alimentos</h1>
-            <h2>Ahorre dinero y optimice su empresa</h2>
-        </div>
-    </section>
-
-    <section class="video">
-        <section class="modulo-nuevo">
-            ⭐ NUEVO <span>Módulo para <strong>BARES y RESTAURANTES</strong></span>
+    <main id="contenido">
+        <section class="hero">
+            <picture class="hero-media" aria-hidden="true">
+                <source media="(max-width: 700px)" srcset="media/banner-mb.jpg">
+                <img src="media/banner.jpg" alt="" fetchpriority="high">
+            </picture>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Consultoría para empresas de Alimentos y Gastronomía</h1>
+                <p class="hero-lead">Ayudamos a empresas de alimentos y negocios gastronómicos a mejorar sus procesos,
+                    reducir problemas y trabajar de manera más eficiente.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contacto">Solicitar diagnóstico sin cargo</a>
+                    <a class="button button-secondary"
+                        href="https://api.whatsapp.com/send?phone=5491140737584&text=Hola%2C%20quiero%20consultar%20por%20una%20asesor%C3%ADa%20para%20mi%20empresa%20o%20local%20gastron%C3%B3mico.%20Mi%20empresa%20es%3A"
+                        target="_blank" rel="noopener noreferrer" onclick="return gtag_report_whatsapp()">Consultar por
+                        WhatsApp</a>
+                </div>
+                <div class="hero-proof" aria-label="Datos destacados de PMC">
+                    <div><strong>+35 años</strong><span>de trayectoria</span></div>
+                    <div><strong>Latinoamérica</strong><span>alcance regional</span></div>
+                    <div><strong>Soluciones a medida</strong><span>para cada operación</span></div>
+                </div>
+            </div>
         </section>
-        <iframe src="https://www.youtube.com/embed/jX4z7g8Ri6A" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <div class="texto">
-            <p>En PMC nos especializamos en buscar la solución adecuada para cada empresa. <br>
-                Contamos con una amplia experiencia y mas de 35 años de trayectoria en empresas de alimentos y bebidas
-                en Latinoamérica. <br>
-                Proveemos un servicio integral a partir de una exacta determinación de las causas para brindar
-                soluciones sustentables. <br></p>
-            <div class="span">
-                <span>"Contamos con todo el conocimiento, las habilidades y la experiencia para ayudarlos a alcanzar su
-                    metas."</span>
-            </div>
-        </div>
-    </section>
 
-    <section class="donde">
-        <p><a href="#contacto">Solicitá un diagnóstico de 30 minutos <strong>SIN CARGO</strong></a></p>
-    </section>
-
-    <section class="nosotros">
-        <h2 class="section-title" id="quienessomos">QUIÉNES SOMOS</h2>
-        <div class="div-img">
-            <img src="media/retrato.jpg" alt="Retrato de Pablo Mc Cormack">
-        </div>
-        <div class="div-text">
-            <p>Consultora PMC se dedica a la consultoría empresaria, estando integrada por un equipo de profesionales
-                con diversas formaciones académicas, que están dispuestos a brindar toda su experiencia y conocimientos
-                adquiridos en empresas líderes, para que cada uno de los clientes crezca, y logre alcanzar sus metas.
-            </p>
-            <h2>Director: Pablo Mc Cormack</h2>
-            <h3>Lic. Tecnología Industrial de Alimentos</h3>
-            <h3>Master en Administración y Marketing Estratégico</h3>
-        </div>
-
-        <div class="valores">
-            <div class="valor">
-                <h3>Visión</h3>
-                <p>Ser la empresa lider de consultoría de alimentos en Latinoamérica.</p>
+        <section class="trust" id="clientes" aria-labelledby="trust-title">
+            <div class="container">
+                <p class="mini-title" id="trust-title">ALGUNAS ORGANIZACIONES QUE CONFIARON EN PMC</p>
+                <div class="logo-grid">
+                    <img src="media/logo-nestle.jpg" alt="Nestlé" loading="lazy">
+                    <img src="media/logo-bimbo.jpg" alt="Bimbo" loading="lazy">
+                    <img src="media/logo-unilever.jpg" alt="Unilever" loading="lazy">
+                    <img src="media/logo-molinos.jpg" alt="Molinos" loading="lazy">
+                    <img src="media/logo-dospinos.jpg" alt="Dos Pinos" loading="lazy">
+                    <img src="media/logo-alpla.jpg" alt="Alpla" loading="lazy">
+                    <img src="media/logo-inta.jpg" alt="INTA" loading="lazy">
+                    <img src="media/logo-uade.jpg" alt="UADE" loading="lazy">
+                </div>
             </div>
-            <div class="valor">
-                <h3>Misión</h3>
-                <p>Brindar soluciones concretas a las necesidades de nuestros clientes.</p>
-            </div>
-            <div class="valor">
-                <h3>Valores</h3>
-                <p>Liderazgo, transparencia, privacidad, capacidad de respuesta, flexibilidad, know how integral.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="propuesta_de_valor" id="propuesta_de_valor">
-        <h2 class="section-title">PROPUESTA DE VALOR</h2>
-        <div class="propuestas">
-            <div class="propuesta">
-                <h3>Auditorías preventivas</h3>
-                <p>
-                    No esperes a la inspección. Realizamos auditorías de "simulacro de control" con
-                    informe de puntos críticos.
-                </p>
-            </div>
+        <section class="checklist-strip">
+            <div class="container checklist-strip-inner">
 
-            <div class="propuesta">
-                <h3>Optimización y mejora</h3>
-                <p>
-                    Hacemos que tus recursos organizacionales y de procesos sean los más alineados con la eficacia de tu
-                    empresa.
-                </p>
-            </div>
+                <div class="checklist-strip-icon" aria-hidden="true">
+                    ✓
+                </div>
 
-            <div class="propuesta">
-                <h3>Rentabilidad</h3>
-                <p>
-                    Tu merma es dinero perdido. Optimizamos el proceso para reducir
-                    desperdicios y analizamos costos por unidad.
-                </p>
-            </div>
+                <div class="checklist-strip-copy">
+                    <span>RECURSO GRATUITO</span>
+                    <h2>¿Querés saber por dónde empezar?</h2>
+                    <p>
+                        Hacé una primera revisión de tu operación con nuestro
+                        checklist de autodiagnóstico.
+                    </p>
+                </div>
 
-            <div class="propuesta">
-                <h3>Programa de formación continua</h3>
-                <p>
-                    Personal certificado con formación profesional evita errores
-                    que arruinan lotes enteros.
-                </p>
-            </div>
+                <a class="checklist-strip-button" href="media/checklist_autodiagnostico.docx" download
+                    onclick="return gtag_report_descarga_checklist()">
+                    Descargar checklist →
+                </a>
 
-            <div class="propuesta">
-                <h3>Desarrollo e innovación</h3>
-                <p>
-                    ¿Querés lanzar un producto saludable? Desarrollamos fórmula,
-                    estabilidad y rótulo nutricional según ley de etiquetado.
-                </p>
             </div>
+        </section>
 
-            <div class="propuesta">
-                <h3>Control de la Operación</h3>
-                <p>
-                    Conjunto de auditorías y capacitaciónes para alcanzar objetivos y lograr una mejora continua.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="servicios" id="servicios">
-        <h2 class="section-title">SERVICIOS</h2>
-        <div class="servicios_contenedor">
-            <img src="media/sistemasdecalidad.jpg" alt="Imagen de sistemas de calidad">
-            <div class="primer_div">
+        <section class="section">
+            <div class="container split-intro">
                 <div>
-                    <h3>Sistemas de Calidad</h3>
-                    <ul>
-                        <li>Buenas prácticas de manufactura (BPM)​</li>
-                        <li>Procedimientos operativos estandarizados de saneamiento (POES)</li>
-                        <li>Análisis de Peligros y Puntos de Control Críticos (HACCP)</li>
-                        <li>ISO 9000</li>
-                        <li>ISO 22000</li>
-                        <li>5S</li>
+                    <p class="eyebrow dark">NUESTRO TRABAJO</p>
+                    <h2>Problemas en los que podemos ayudarte</h2>
+                </div>
+                <p>Trabajamos desde el diagnóstico hasta la implementación. No proponemos soluciones genéricas:
+                    analizamos el proceso, detectamos las causas y acompañamos los cambios necesarios para sostener los
+                    resultados.</p>
+            </div>
+
+            <div class="container value-grid">
+                <article class="value-card">
+                    <span class="card-number">01</span>
+                    <h3>Prevenir desvíos</h3>
+                    <p>Detectamos puntos críticos antes de que se conviertan en pérdidas, reclamos o problemas de
+                        calidad.</p>
+                </article>
+                <article class="value-card">
+                    <span class="card-number">02</span>
+                    <h3>Reducir costos y mermas</h3>
+                    <p>Revisamos productividad, desperdicios, tiempos y uso de recursos para encontrar oportunidades de
+                        mejora.</p>
+                </article>
+                <article class="value-card">
+                    <span class="card-number">03</span>
+                    <h3>Ordenar procesos</h3>
+                    <p>Diseñamos procedimientos y herramientas de gestión para que la operación sea más consistente y
+                        controlable.</p>
+                </article>
+                <article class="value-card">
+                    <span class="card-number">04</span>
+                    <h3>Desarrollar equipos</h3>
+                    <p>Capacitamos y acompañamos al personal para transformar las mejoras técnicas en hábitos de trabajo
+                        sostenibles.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="servicios">
+            <div class="container section-heading">
+                <p class="eyebrow dark">SERVICIOS</p>
+                <h2>Nuestros servicios</h2>
+                <p>Podemos intervenir en un problema puntual o acompañar un proceso de mejora más amplio.</p>
+            </div>
+
+            <div class="container service-grid">
+                <article class="service-card featured">
+                    <img src="media/sistemasdecalidad.jpg" alt="Trabajo sobre sistemas de calidad" loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Calidad</span>
+                        <h3>Sistemas de Calidad</h3>
+                        <p>Implementación y mejora de herramientas para ordenar la gestión y asegurar procesos
+                            consistentes.</p>
+                        <ul>
+                            <li>Buenas Prácticas de Manufactura (BPM)</li>
+                            <li>Procedimientos operativos estandarizados de saneamiento (POES)</li>
+                            <li>Análisis de Peligros y Puntos de Control Críticos (HACCP)</li>
+                            <li>ISO 9000 e ISO 22000</li>
+                            <li>Metodología 5S</li>
+                        </ul>
+                        <a href="#contacto" class="text-link" data-service="Sistemas de Calidad">Consultar por este
+                            servicio →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="media/auditorias.jpg" alt="Auditoría en una empresa de alimentos" loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Diagnóstico</span>
+                        <h3>Auditorías de Calidad</h3>
+                        <p>Auditorías internas, de proceso, a proveedores y a clientes para detectar desvíos, riesgos y
+                            oportunidades de mejora.</p>
+                        <a href="#contacto" class="text-link" data-service="Auditorías de Calidad">Consultar por este
+                            servicio →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="media/optimizaciondeprocesos.jpg" alt="Optimización de procesos productivos"
+                        loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Productividad</span>
+                        <h3>Optimización de Procesos</h3>
+                        <p>Estudios in situ, evaluación de productividad, rediseño de procesos y análisis de
+                            oportunidades para reducir costos.</p>
+                        <a href="#contacto" class="text-link" data-service="Optimización de Procesos">Consultar por este
+                            servicio →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="media/desarrollo-de-productos-2.jpg" alt="Desarrollo de nuevos productos alimenticios"
+                        loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Innovación</span>
+                        <h3>Desarrollo de Productos</h3>
+                        <p>Acompañamos desde la idea, formulación y pruebas piloto hasta el escalado industrial,
+                            buscando productos consistentes y viables. Nuestro servicio permite diferenciarse en el
+                            mercado con propuestas únicas y adaptadas a las tendencias de consumo.</p>
+                        <a href="#contacto" class="text-link" data-service="Desarrollo de Productos">Consultar por este
+                            servicio →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="media/capacitacion.jpg" alt="Capacitación de equipos de trabajo" loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Equipos</span>
+                        <h3>Capacitación</h3>
+                        <p>Capacitaciones en calidad, mejora de productividad, resolución de problemas, liderazgo,
+                            motivación, conducción, ventas y atención al cliente.
+                            Colaboramos en el armado de tableros de control y comando, para lograr la mejor eficacia en
+                            el logro de los resultados.</p>
+                        <a href="#contacto" class="text-link" data-service="Capacitación">Consultar por este servicio
+                            →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="media/coaching.jpg" alt="Coaching estratégico para equipos" loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Gestión</span>
+                        <h3>Coaching Estratégico</h3>
+                        <p>Sesiones presenciales o virtuales para nivel operativo, mandos medios y personal gerencial,
+                            enfocadas en objetivos concretos.</p>
+                        <a href="#contacto" class="text-link" data-service="Coaching Estratégico">Consultar por este
+                            servicio →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="media/mystery.jpg" alt="Evaluación de experiencia mediante Mystery Shopper"
+                        loading="lazy">
+                    <div class="service-body">
+                        <span class="service-tag">Experiencia</span>
+                        <h3>Mystery Shopper</h3>
+                        <p>Evaluaciones adaptadas a empresas, bares, restaurantes, supermercados y locales de alimentos
+                            y bebidas.</p>
+                        <a href="#contacto" class="text-link" data-service="Mystery Shopper">Consultar por este servicio
+                            →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="restaurant section" id="gastronomia">
+            <div class="container restaurant-wrap">
+                <div class="restaurant-copy">
+                    <p class="eyebrow">MÓDULO PARA BARES Y RESTAURANTES</p>
+                    <h2>Una propuesta específica para bares y restaurantes</h2>
+                    <p>Revisamos el funcionamiento del local, la calidad, el servicio,
+                        los costos y la experiencia del cliente para detectar oportunidades de mejora.</p>
+                    <ul class="check-list">
+                        <li>Auditoría preventiva del local</li>
+                        <li>Revisión de procesos y rutinas de trabajo</li>
+                        <li>Control de mermas y oportunidades de ahorro</li>
+                        <li>Capacitación del equipo</li>
+                        <li>Mystery Shopper y experiencia del cliente</li>
                     </ul>
+                    <a class="button button-light" href="#contacto"
+                        data-service="Módulo para Bares y Restaurantes">Quiero evaluar mi local</a>
+                </div>
+                <div class="restaurant-panel">
+                    <p class="panel-kicker">DIAGNÓSTICO</p>
+                    <p class="panel-big">30 min.</p>
+                    <p class="panel-copy">Una primera conversación sin cargo para entender tu situación y ver cómo
+                        podemos ayudarte.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5491140737584&text=Hola%2C%20quiero%20consultar%20por%20el%20m%C3%B3dulo%20para%20bares%20y%20restaurantes."
+                        target="_blank" rel="noopener noreferrer" onclick="return gtag_report_whatsapp()">Coordinar por
+                        WhatsApp →</a>
                 </div>
             </div>
-        </div>
-        <div class="servicios_contenedor">
-            <div class="primer_div">
-                <div>
-                    <h3>Auditorías de Calidad</h3>
-                    <p>Realizamos auditorías internas, de calidad y de proceso dentro de su empresa, y también
-                        auditorías a proveedores, tanto de materias primas como de materiales de empaque. <br>
-                        También contamos con un servicio de auditoría a clientes.</p>
-                </div>
+        </section>
+
+        <section class="process section" id="propuesta_de_valor">
+            <div class="container section-heading process-heading">
+                <p class="eyebrow dark">CÓMO TRABAJAMOS</p>
+                <h2>Propuesta de valor</h2>
+                <p>
+                    Combinamos diagnóstico, experiencia técnica y acompañamiento
+                    para transformar problemas concretos en mejoras sostenibles.
+                </p>
             </div>
-            <img src="media/auditorias.jpg" alt="Imagen de auditorias">
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/capacitacion.jpg" alt="Imagen de capacitaciones">
-            <div class="primer_div">
-                <div>
-                    <h3>Capacitación</h3>
-                    <p>Contamos con diferentes capacitaciones en calidad, mejora de productividad, resolución de
-                        problemas, liderazgo, motivación, conducción, ventas y atención al cliente. <br>
-                        Colaboramos en el armado de tableros de control y comando, para lograr la mejor eficacia en el
-                        logro de los resultados.</p>
-                </div>
-            </div>
-        </div>
-        <div class="servicios_contenedor">
-            <div class="primer_div">
-                <div>
-                    <h3>Desarrollo de Productos</h3>
-                    <p>Transformamos ideas en alimentos innovadores y seguros. Acompañamos desde la formulación y
-                        pruebas
-                        piloto hasta el escalado industrial, asegurando calidad, sabor y cumplimiento normativo. Nuestro
-                        servicio permite diferenciarse en el mercado con propuestas únicas y adaptadas a las tendencias
-                        de
-                        consumo.
+
+            <div class="container process-grid">
+
+                <article>
+                    <span class="process-number">01</span>
+                    <h3>Auditorías preventivas</h3>
+                    <p>
+                        No esperes a la inspección. Realizamos auditorías de "simulacro de control" con informe de
+                        puntos críticos.
                     </p>
-                </div>
-            </div>
-            <img src="media/desarrollo-de-productos-2.jpg" alt="Imagen de Desarrollo de productos">
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/coaching.jpg" alt="Imagenes de coaching">
-            <div class="primer_div">
-                <div>
-                    <h3>Coaching Estratégico</h3>
-                    <p>Brindamos sesiones virtuales o presenciales de coaching aplicado a nivel operativo, mandos medios
-                        y personal gerencial para alcanzar los objetivos estratégicos de la empresa.</p>
-                </div>
-            </div>
-        </div>
-        <div class="servicios_contenedor">
-            <div class="primer_div">
-                <div>
-                    <h3>Optimización de Procesos</h3>
-                    <p>Contamos con personal para realizar estudios in situ del proceso a mejorar, evaluación de
-                        productividad, aplicación de nuevas tecnologías, rediseño de procesos, obteniendo la
-                        consiguiente reducción de costos.</p>
-                </div>
-            </div>
-            <img src="media/optimizaciondeprocesos.jpg" alt="Imagen de optimizacion de procesos">
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/mystery.jpg" alt="Imagen de Mystery shoppers">
-            <div class="primer_div">
-                <div>
-                    <h3>Mystery Shopper</h3>
-                    <p>Es un servicio de evaluación totalmente adaptable a cada empresa y a la necesidad específica que
-                        la misma tenga. <br>
-                        Contamos con diferentes mysterys para empresas, bares, restaurants, supermercados, locales
-                        comerciales al público de alimentos/bebidas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                </article>
 
-    <section class="servicios-mb" id="servicios-mb">
-        <h2 class="section-title">SERVICIOS</h2>
-        <div class="servicios_contenedor">
-            <img src="media/sistemasdecalidad.jpg" alt="Imagen de sistemas de calidad">
-            <div class="primer_div">
-                <div>
-                    <h3>Sistemas de Calidad</h3>
-                    <ul>
-                        <li>Buenas prácticas de manufactura (BPM)​</li>
-                        <li>Procedimientos operativos estandarizados de saneamiento (POES)</li>
-                        <li>Análisis de Peligros y Puntos de Control Críticos (HACCP)</li>
-                        <li>ISO 9000</li>
-                        <li>ISO 22000</li>
-                        <li>5S</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/auditorias.jpg" alt="Imagen de auditorias">
-            <div class="primer_div">
-                <div>
-                    <h3>Auditorías de Calidad</h3>
-                    <p>Realizamos auditorías internas, de calidad y de proceso dentro de su empresa, y también
-                        auditorías a proveedores, tanto de materias primas como de materiales de empaque.
-                        También contamos con un servicio de auditoría a clientes.</p>
-                </div>
-            </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/capacitacion.jpg" alt="Imagen de capacitaciones">
-            <div class="primer_div">
-                <div>
-                    <h3>Capacitación</h3>
-                    <p>Contamos con diferentes capacitaciones en calidad, mejora de productividad, resolución de
-                        problemas, liderazgo, motivación, conducción, ventas y atención al cliente.
-                        Colaboramos en el armado de tableros de control y comando, para lograr la mejor eficacia en el
-                        logro de los resultados.</p>
-                </div>
-            </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/desarrollo-de-productos-2.jpg" alt="Imagen de Desarrollo de productos">
-            <div class="primer_div">
-                <div>
-                    <h3>Desarrollo de Productos</h3>
-                    <p>Transformamos ideas en alimentos innovadores y seguros. Acompañamos desde la formulación y
-                        pruebas
-                        piloto hasta el escalado industrial, asegurando calidad, sabor y cumplimiento normativo. Nuestro
-                        servicio permite diferenciarse en el mercado con propuestas únicas y adaptadas a las tendencias
-                        de
-                        consumo.
+                <article>
+                    <span class="process-number">02</span>
+                    <h3>Optimización y mejora</h3>
+                    <p>
+                        Hacemos que tus recursos organizacionales y de procesos sean los más alineados con la eficacia
+                        de tu empresa.
                     </p>
-                </div>
-            </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/etiquetado.webp" alt="Imagen de la ley de etiquetado">
-            <div class="primer_div">
-                <div>
-                    <h3>Seguridad legal y etiquetado</h3>
-                    <p>Nos encargamos de realizar registros de RNE y RNPA, diseño de rótulos nutricionales exactos,
-                        aplicación de octógonos
-                        según corresponda (evita multas por sellos mal aplicados).
+                </article>
+
+                <article>
+                    <span class="process-number">03</span>
+                    <h3>Rentabilidad</h3>
+                    <p>
+                        Tu merma es dinero perdido. Optimizamos el proceso para reducir desperdicios y analizamos costos
+                        por unidad.
                     </p>
+                </article>
+
+                <article>
+                    <span class="process-number">04</span>
+                    <h3>Programa de formación continua</h3>
+                    <p>
+                        Personal certificado con formación profesional evita errores que arruinan lotes enteros.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="process-number">05</span>
+                    <h3>Desarrollo e innovación</h3>
+                    <p>
+                        ¿Queres lanzar un producto? Podemos trabajar en el desarrollo de la fórmula y el procedimiento
+                        de elaboración.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="process-number">06</span>
+                    <h3>Control de la Operación</h3>
+                    <p>
+                        Conjunto de auditorías y capacitaciones para alcanzar objetivos y lograr una mejora continua.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="about section section-soft" id="nosotros">
+            <div class="container about-grid">
+                <div class="about-photo">
+                    <img src="media/retrato.jpg" alt="Pablo Mc Cormack, director de PMC Consultora" loading="lazy">
+                    <div class="experience-badge"><strong>+35</strong><span>años de experiencia</span></div>
+                </div>
+                <div class="about-copy">
+                    <p class="eyebrow dark">QUIÉNES SOMOS</p>
+                    <h2>Experiencia y conocimiento aplicados a cada proyecto</h2>
+                    <p>PMC Consultora está integrada por profesionales con diferentes formaciones y experiencia en
+                        empresas líderes. Nuestro objetivo es aportar conocimiento aplicable para que cada cliente pueda
+                        mejorar su operación y alcanzar sus metas.</p>
+                    <div class="director-card">
+                        <h3>Pablo Mc Cormack</h3>
+                        <p>Director</p>
+                        <ul>
+                            <li>Lic. en Tecnología Industrial de Alimentos</li>
+                            <li>Master en Administración y Marketing Estratégico</li>
+                        </ul>
+                    </div>
+                    <div class="principles">
+                        <div><strong>Visión</strong><span>Ser la empresa líder de consultoría de alimentos en
+                                Latinoamérica.</span></div>
+                        <div><strong>Misión</strong><span>Brindar soluciones concretas a las necesidades de nuestros
+                                clientes.</span></div>
+                        <div><strong>Valores</strong><span>Liderazgo, transparencia, privacidad, flexibilidad, know how
+                                integral.</span></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/coaching.jpg" alt="Imagen de coaching">
-            <div class="primer_div">
-                <div>
-                    <h3>Coaching Estratégico</h3>
-                    <p>Brindamos sesiones virtuales o presenciales de coaching aplicado a nivel operativo, mandos medios
-                        y personal gerencial para alcanzar los objetivos estratégicos de la empresa.</p>
+        </section>
+
+        <section class="section">
+            <div class="container media-grid">
+                <div class="video-block">
+                    <p class="eyebrow dark">SOBRE PMC</p>
+                    <h2>Conocé nuestra forma de trabajo</h2>
+                    <div class="video-frame">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/jX4z7g8Ri6A?rel=0"
+                            title="Presentación de PMC Consultora" referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <aside class="checklist-card">
+                    <span class="download-icon" aria-hidden="true">↓</span>
+                    <p class="eyebrow dark">RECURSO GRATUITO</p>
+                    <h3>Checklist de autodiagnóstico</h3>
+                    <p>Una herramienta sencilla para hacer una primera revisión de tu operación e identificar puntos a
+                        trabajar.</p>
+                    <a href="media/checklist_autodiagnostico.docx" download
+                        onclick="return gtag_report_descarga_checklist()">Descargar checklist →</a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section section-tight">
+            <div class="container">
+                <p class="mini-title">MÁS ORGANIZACIONES QUE CONFIARON EN PMC</p>
+                <div class="more-logo-grid">
+                    <img src="media/logo-yaguar.jpg" alt="Yaguar" loading="lazy">
+                    <img src="media/logo-ramada.jpg" alt="Ramada" loading="lazy">
+                    <img src="media/logo-diana.jpg" alt="Diana" loading="lazy">
+                    <img src="media/logo-infocampo.jpg" alt="Infocampo" loading="lazy">
+                    <img src="media/logo amalfi.jpg" alt="Amalfi" loading="lazy">
+                    <img src="media/lacabrera.png" alt="La Cabrera" loading="lazy">
+                    <img src="media/logo-toledo.jpg" alt="Toledo" loading="lazy">
                 </div>
             </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/optimizaciondeprocesos.jpg" alt="Imagen de optimizacion de procesos">
-            <div class="primer_div">
-                <div>
-                    <h3>Optimización de Procesos</h3>
-                    <p>Contamos con personal para realizar estudios in situ del proceso a mejorar, evaluación de
-                        productividad, aplicación de nuevas tecnologías, rediseño de procesos, obteniendo la
-                        consiguiente reducción de costos.</p>
+        </section>
+
+        <section class="section section-soft">
+            <div class="container section-heading compact">
+                <p class="eyebrow dark">PRENSA</p>
+                <h2>PMC en medios</h2>
+            </div>
+            <div class="container press-grid">
+                <a href="media/prensa1.jpg" target="_blank" rel="noopener" aria-label="Ver publicación de prensa 1">
+                    <img src="media/prensa1.jpg" alt="Publicación de prensa sobre PMC Consultora" loading="lazy">
+                </a>
+                <a href="media/prensa2.jpg" target="_blank" rel="noopener" aria-label="Ver publicación de prensa 2">
+                    <img src="media/prensa2.jpg" alt="Publicación de prensa sobre PMC Consultora" loading="lazy">
+                </a>
+            </div>
+        </section>
+
+        <section class="contact section" id="contacto">
+            <div class="container contact-grid">
+                <div class="contact-copy">
+                    <p class="eyebrow">HABLEMOS</p>
+                    <h2>Contanos qué necesitás mejorar</h2>
+                    <p>Coordinamos un diagnóstico inicial de 30 minutos sin cargo para entender el problema y evaluar
+                        cómo podemos ayudarte.</p>
+
+                    <div class="contact-options">
+                        <a href="https://api.whatsapp.com/send?phone=5491140737584&text=Hola%2C%20quiero%20consultar%20por%20una%20asesor%C3%ADa%20para%20mi%20empresa%20o%20local%20gastron%C3%B3mico.%20Mi%20empresa%20es%3A"
+                            target="_blank" rel="noopener noreferrer" onclick="return gtag_report_whatsapp()">
+                            <span>WhatsApp</span>
+                            <strong>+54 9 11 4073-7584</strong>
+                        </a>
+                        <a href="mailto:hablapmc@hotmail.com" onclick="return gtag_report_mail()">
+                            <span>Email</span>
+                            <strong>hablapmc@hotmail.com</strong>
+                        </a>
+                    </div>
+                    <p class="region-note">Atendemos empresas en Argentina y otros países de América Latina.</p>
+                </div>
+
+                <div class="form-card">
+                    <form id="contactForm" action="enviar-formulario.php" method="POST">
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="nombre">Nombre *</label>
+                                <input id="nombre" type="text" name="nombre" autocomplete="name" required>
+                            </div>
+                            <div class="field">
+                                <label for="nombreEmpresa">Empresa / local</label>
+                                <input id="nombreEmpresa" type="text" name="nombreEmpresa" autocomplete="organization">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="mail">Email</label>
+                                <input id="mail" type="email" name="mail" autocomplete="email"
+                                    pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}">
+                            </div>
+                            <div class="field">
+                                <label for="celular">WhatsApp / celular</label>
+                                <input id="celular" type="tel" name="celular" autocomplete="tel" inputmode="tel" pattern="[0-9+\s()\-]{8,25}">
+                            </div>
+                        </div>
+                        <p class="field-help">Completá al menos un email o un teléfono para poder responderte.</p>
+
+                        <div class="field">
+                            <label for="servicio">¿En qué podemos ayudarte? *</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option>Sistemas de Calidad</option>
+                                <option>Auditorías de Calidad</option>
+                                <option>Optimización de Procesos</option>
+                                <option>Desarrollo de Productos</option>
+                                <option>Capacitación</option>
+                                <option>Coaching Estratégico</option>
+                                <option>Mystery Shopper</option>
+                                <option>Módulo para Bares y Restaurantes</option>
+                                <option>Otra consulta</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="mensaje">Contanos brevemente qué necesitás *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="website">Sitio web</label>
+                            <input id="website" type="text" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <button type="submit" class="button button-primary button-submit">Enviar consulta</button>
+                        <p class="form-note">Respondemos personalmente. No enviamos spam.</p>
+                        <p id="formMsg" class="form-message" role="status" aria-live="polite"></p>
+                    </form>
                 </div>
             </div>
-        </div>
-        <div class="servicios_contenedor">
-            <img src="media/mystery.jpg" alt="Imagen de mysterys shoppers">
-            <div class="primer_div">
-                <div>
-                    <h3>Mystery Shopper</h3>
-                    <p>Es un servicio de evaluación totalmente adaptable a cada empresa y a la necesidad específica que
-                        la misma tenga.
-                        Contamos con diferentes mysterys para empresas, bares, restaurants, supermercados, locales
-                        comerciales al público de alimentos/bebidas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section class="clientes" id="clientes">
-        <h2>Estas son algunas de las empresas con las que trabajamos.</h2>
-        <div class="marcas">
-            <img src="media/logo-nestle.jpg" alt="Logo de nestle">
-            <img src="media/logo-dospinos.jpg" alt="Logo de dos pinos">
-            <img src="media/logo-bimbo.jpg" alt="Logo de bimbo">
-            <img src="media/logo-unilever.jpg" alt="Logo de unilever">
-            <img src="media/logo-uade.jpg" alt="Logo de uade">
-            <img src="media/logo-molinos.jpg" alt="Logo de molinos">
-            <img src="media/logo-alpla.jpg" alt="Logo de alpla">
-            <img src="media/logo-yaguar.jpg" alt="Logo de yaguar">
-            <img src="media/logo-inta.jpg" alt="Logo de inta">
-            <img src="media/logo-ramada.jpg" alt="Logo de la ramada">
-            <img src="media/logo-diana.jpg" alt="Logo de diana">
-            <img src="media/logo-infocampo.jpg" alt="Logo de infocampo">
-            <img src="media/logo amalfi.jpg" alt="Logo de amalfi" style="width: 70%;">
-            <img src="media/lacabrera.png" alt="Logo La Cabrera" style="width: 70%;">
-            <img src="media/logo-toledo.jpg" alt="Logo de Toledo" style="width: 70%;">
-        </div>
-    </section>
-
-    <section class="prensa">
-        <div class="diarios">
-            <img src="media/prensa1.jpg" alt="Prensa de consultora pmc">
-            <img src="media/prensa2.jpg" alt="Prensa de consultora pmc">
-        </div>
-    </section>
-
-    <div class="contacto" id="contacto">
-        <h1 class="contacto__h1">Contactanos</h1>
-        <h2>Dejanos tu consulta y te responderemos a la brevedad</h2>
-        <form id="contactForm" action="enviar-formulario.php" method="POST" class="contacto__form">
-            <input type="text" name="nombre" placeholder="Tu nombre..." required>
-            <input type="text" name="apellido" placeholder="Tu apellido...">
-            <input type="email" name="mail" placeholder="Tu mail..." required>
-            <input type="tel" name="celular" placeholder="Tu celular..." required>
-            <input type="text" name="nombreEmpresa" placeholder="Nombre de la empresa..." required>
-            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        <p id="formMsg" style="display:none; color:green; margin-top:10px; text-align: center; font-size: 1.2em;"></p>
-    </div>
-
-    <a href="/media/checklist_autodiagnostico.docx" class="checklist-tab" download
-        onclick="return gtag_report_descarga_checklist(this.href)">
-        Descargá tu <strong>checklist de Autodiagnóstico</strong>
+    <a class="whatsapp-float"
+        href="https://api.whatsapp.com/send?phone=5491140737584&text=Hola%2C%20quiero%20consultar%20por%20una%20asesor%C3%ADa%20para%20mi%20empresa%20o%20local%20gastron%C3%B3mico.%20Mi%20empresa%20es%3A"
+        target="_blank" rel="noopener noreferrer" aria-label="Consultar a PMC por WhatsApp"
+        onclick="return gtag_report_whatsapp()">
+        <img src="media/wpp.png" alt="" width="64" height="64">
     </a>
 
-    <div class="btn-whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=5491140737584&text=Hola%2C%20quiero%20consultar%20por%20una%20asesor%C3%ADa%20para%20mi%20empresa%20o%20local%20gastron%C3%B3mico.%20Mi%20empresa%20es%3A"
-            target="_blank" onclick="return gtag_report_whatsapp(this.href)"><img src="media/wpp.png" alt=""></a>
-    </div>
-
-    <section class="donde">
-        <p>Ofrecemos nuestros servicios en <strong>toda</strong> América Latina! <a href="#contacto">Contactanos</a></p>
-    </section>
-
-    <footer class="footer">
-        <a href="index.html" class="logo_footer"><img src="media/logoconsultora.png" alt="Logo Consultora PMC"></a>
-        <div class="footer_content">
-            <a href="https://api.whatsapp.com/send?phone=5491140737584&text=Hola%2C%20quiero%20consultar%20por%20una%20asesor%C3%ADa%20para%20mi%20empresa%20o%20local%20gastron%C3%B3mico.%20Mi%20empresa%20es%3A"
-                target="_blank" class="footer__a" rel="noreferrer noopener"
-                onclick="return gtag_report_whatsapp(this.href)"><i class="fab fa-whatsapp redes"></i></a>
-            <a href="mailto:hablapmc@hotmail.com" target="_blank" class="footer__a" rel="noreferrer noopener"
-                onclick="return gtag_report_mail(this.href)"><i class="far fa-envelope-open"></i></a>
-            <br>
-            <a class="rr" href="https://www.linkedin.com/in/pablo-bottinelli">© 2026: PMC Consultora | Web By Pablo
-                Bottinelli</a>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <a class="footer-brand" href="#inicio"><img src="media/logoconsultora.png" alt="PMC Consultora" width="291"
+                    height="129"></a>
+            <div>
+                <strong>PMC Consultora</strong>
+                <p>Consultoría para empresas de alimentos y gastronomía.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Quiénes somos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const formStatus = params.get("form");
-        const formMsg = document.getElementById("formMsg");
 
-        if (formMsg && formStatus === "ok") {
-            formMsg.style.display = "block";
-            formMsg.style.color = "green";
-            formMsg.innerText = "✅ Tu mensaje fue enviado con éxito.";
-            if (typeof gtag_report_formulario === "function") {
-                gtag_report_formulario();
-            }
-        }
-
-        if (formMsg && formStatus === "error") {
-            formMsg.style.display = "block";
-            formMsg.style.color = "red";
-            formMsg.innerText = "⚠️ Hubo un error al enviar el mensaje. Probá de nuevo.";
-        }
-
-        if (formMsg && formStatus === "mail-invalido") {
-            formMsg.style.display = "block";
-            formMsg.style.color = "red";
-            formMsg.innerText = "⚠️ Ingresá un email válido.";
-        }
-    </script>
-    <script>
-        const links = document.querySelectorAll(".nav-link");
-        const menu = document.querySelector(".collapse");
-
-        links.forEach(link => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("show");
-            });
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
