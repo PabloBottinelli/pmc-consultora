@@ -27,10 +27,19 @@ if ($nombre === "" || $servicio === "" || $mensaje === "") {
 }
 
 $mailValido = ($mail !== "" && filter_var($mail, FILTER_VALIDATE_EMAIL));
+$soloDigitos = preg_replace('/\D/', '', $celular);
+
 $telefonoValido = (
     $celular !== "" &&
-    preg_match('/^[0-9+\s()\-]{8,25}$/', $celular)
+    preg_match('/^[0-9+\s()\-]{8,25}$/', $celular) &&
+    strlen($soloDigitos) >= 8 &&
+    strlen($soloDigitos) <= 15
 );
+
+if ($celular !== "" && !$telefonoValido) {
+    header("Location: /?form=contacto#contacto");
+    exit;
+}
 
 if ($mail !== "" && !$mailValido) {
     header("Location: /?form=mail-invalido#contacto");

@@ -56,8 +56,13 @@
             }
         });
 
-        [email, phone].forEach(field => {
-            field.addEventListener('input', () => phone.setCustomValidity(''));
+        email.addEventListener('input', () => {
+            phone.setCustomValidity('');
+        });
+
+        phone.addEventListener('input', () => {
+            phone.value = phone.value.replace(/[^0-9+\s()-]/g, '');
+            phone.setCustomValidity('');
         });
     }
 
