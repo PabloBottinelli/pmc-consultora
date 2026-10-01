@@ -16,8 +16,6 @@ Es una landing comercial orientada a presentar los servicios de la consultora, g
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)
 ![Google Ads](https://img.shields.io/badge/Google%20Ads-4285F4?logo=googleads&logoColor=white)
-![Google Tag](https://img.shields.io/badge/Google%20Tag-246FDB?logo=googletagmanager&logoColor=white)
-![Schema.org](https://img.shields.io/badge/Schema.org-JSON--LD-0B74DE)
 
 ## Sobre la web
 
